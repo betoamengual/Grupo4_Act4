@@ -6,5 +6,5 @@ public interface Madre {
     public static final int NRO_SUERTE = 36;
     
     void bailar();
-    int jugarLoteria();
+    void jugarLoteria();
 }
