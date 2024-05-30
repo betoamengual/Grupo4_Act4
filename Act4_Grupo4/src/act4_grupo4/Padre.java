@@ -30,7 +30,7 @@ public class Padre {
     
      public Padre(String apellido, Auto auto) {
         this(apellido, ""); // 
-        this.agregarAuto(auto); // Intente pasar el apellido sin el nombre
+        this.agregarAuto(auto); // Nuevo constructor solo con apellido
     }
 
     public List<Auto> getAutos() {
