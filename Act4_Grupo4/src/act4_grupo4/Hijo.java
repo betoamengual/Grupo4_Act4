@@ -1,7 +1,5 @@
 package act4_grupo4;
 
-import java.util.Arrays;
-
 public class Hijo extends Padre implements Madre, Tio, Hermano {
 
     private String nombre;
@@ -14,18 +12,62 @@ public class Hijo extends Padre implements Madre, Tio, Hermano {
         this.nombre = nombre;
         this.celular = celular;
     }
-
-    public void Cantar() {
-        super.cantar(apellido);
-        System.out.println("Y asi canta tu hijo, " + this.nombre);
+    
+    //Getters & Setters
+    @Override
+    public String getNombre() {
+        return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Auto[] getAuto() {
+        return auto;
+    }
+
+    public void setAuto(Auto[] auto) {
+        this.auto = auto;
+    }
+
+    public Celular getCelular() {
+        return celular;
+    }
+
+    public void setCelular(Celular celular) {
+        this.celular = celular;
+    }
+
+    public double getBilletera() {
+        return billetera;
+    }
+
+    public void setBilletera(double billetera) {
+        this.billetera = billetera;
+    }
+
+    @Override
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    @Override
+    public void cantar(String apellido) {
+        super.cantar(apellido);
+        System.out.println(" y asi canta " + this.nombre);
+    }
+    
     public void mostrarAuto() {//Agregar a diagrama
-        System.out.println("Papa me dejo este auto: " + getAutos());
+        System.out.println("Papa me dejo este auto modelo: " + getAutos());
     }
 
     public void conducirAuto(Auto tito) {
-        System.out.println("“conduciendo un auto de un amigo” :" + tito);
+        System.out.println("Conduciendo un "+tito.getModelo()+" de un amigo!");
 
     }
 
@@ -37,20 +79,19 @@ public class Hijo extends Padre implements Madre, Tio, Hermano {
     @Override
     public void jugarLoteria() {
         int nrosuerte = (int) (Math.random() * 100) + 1;
-        System.out.println("SALIO EL NUMERO DE LA SUERTE: " + nrosuerte);
         billetera = billetera + FORTUNA;
-        System.out.println("Heredaste la Fortuna de 50000.0 de tu madre la ROSA!!");
-        System.out.println("Saldo actual de la billetera = $"+billetera);
+        System.out.println("Heredaste la Fortuna de 50000.0 de tu madre la ROSA!! Ahora tienes "+billetera+"U$S");
+        System.out.println("SALIO EL NUMERO DE LA SUERTE: " + nrosuerte);
     }
 
     @Override
     public void HeredarDinero(double money) {
-
+        System.out.println("MSG de Tio Lucas: Disfruta la herencia Addams, sumas "+money+" dolaritos");
     }
 
     @Override
-    public int hacerGoles() {
-        return 0;
+    public void hacerGoles() {
+        System.out.println("Jugando al futbol, hoy haz echo 0 goles");
     }
 
     @Override
@@ -62,5 +103,5 @@ public class Hijo extends Padre implements Madre, Tio, Hermano {
     public String toString() {
         return "Hijo{" + "nombre=" + nombre + ", auto=" + getAutos() + ", celular=" + celular + '}';
     }
-
+    
 }

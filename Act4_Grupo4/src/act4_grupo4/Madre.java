@@ -1,4 +1,3 @@
-
 package act4_grupo4;
 
 public interface Madre {

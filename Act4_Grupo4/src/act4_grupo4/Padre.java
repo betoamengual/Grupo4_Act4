@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package act4_grupo4;
 
 import java.util.ArrayList;
@@ -20,12 +15,10 @@ public class Padre {
         this.nombre = nombre;
         this.autos = new ArrayList<>();
         this.casa = construirCasa();
-        //construirCasa(); //revisar..
-        //comprarAuto();
     }
     public Padre(String apellido, String nombre, Auto auto) {
-        this(apellido, nombre); // Call the primary constructor
-        this.agregarAuto(auto); // Add the auto to the list
+        this(apellido, nombre); // Llamar al primer constructor
+        this.agregarAuto(auto); // Agregar un auto a la lista
     }
     
      public Padre(String apellido, Auto auto) {
@@ -38,7 +31,7 @@ public class Padre {
     }
 
     public void cantar(String apellido) {
-        System.out.println("Asi canta tu padre , Don " + this.apellido);
+        System.out.print("Asi canta tu padre, Don " + this.apellido);
     }
 
     public void agregarAuto(Auto auto) { //cambiar en el diagrama de clases

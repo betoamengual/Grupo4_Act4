@@ -1,7 +1,4 @@
-
 package act4_grupo4;
-
-
 
 public class Auto {
     private final double tanque = 50;
@@ -27,7 +24,6 @@ public class Auto {
 
     @Override
     public String toString() {
-        return "Auto{" + "modelo=" + modelo + ", patente=" + patente + '}';
+        return modelo;
     }
-    
 }
